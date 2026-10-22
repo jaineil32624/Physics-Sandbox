@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1522">
+  <meta name="description" content="App1 - a 2D rigid-body physics sandbox written in vanilla JavaScript.">
+  <title>App1 · 2D Physics Sandbox</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Simulation stage -------------------------------------------------- -->
+    <main id="stage">
+      <canvas id="sim-canvas" aria-label="Physics simulation. Use the side panel to choose tools."></canvas>
+
+      <div class="hud hud-controls" role="toolbar" aria-label="Simulation controls">
+        <button id="btn-pause" title="Pause / resume (Space)">Pause</button>
+        <button id="btn-step" title="Step one frame (.)">Step</button>
+        <button id="btn-reset" title="Reset scene (R)">Reset</button>
+        <span class="sep" aria-hidden="true"></span>
+        <button id="btn-zoom-out" title="Zoom out (-)" aria-label="Zoom out">−</button>
+        <button id="btn-zoom-in" title="Zoom in (+)" aria-label="Zoom in">+</button>
+        <button id="btn-fit" title="Fit world in view (F)">Fit</button>
+        <button id="btn-panel" title="Toggle panel (H)" aria-label="Toggle control panel" aria-controls="panel" aria-expanded="true">☰</button>
+      </div>
+
+      <section id="stats" class="hud hud-stats" aria-label="Physics statistics">
+        <header>
+          <h2>Stats</h2>
+          <button id="btn-stats-toggle" class="mini" aria-label="Collapse statistics" aria-expanded="true">–</button>
+        </header>
+        <div class="stats-content">
+          <dl id="stats-body"></dl>
+          <div id="selected-stats"></div>
+        </div>
+      </section>
+
+      <div id="tool-hint" class="hud hud-hint" aria-live="polite"></div>
+      <div id="paused-badge" class="hud" hidden>PAUSED</div>
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="fatal" hidden></div>
+    </main>
+
+    <!-- Control panel ---------------------------------------------------------- -->
+    <aside id="panel" aria-label="Control panel">
+      <div class="panel-header">
+        <div>
+          <h1>App1</h1>
+          <span class="muted">2D Physics Sandbox</span>
+        </div>
+        <button id="btn-panel-close" class="mini" aria-label="Close panel">×</button>
+      </div>
+
+      <section>
+        <h3>Tool</h3>
+        <div id="tool-buttons" class="btn-grid tools"></div>
+      </section>
+
+      <section>
+        <h3>Shape</h3>
+        <div id="shape-buttons" class="btn-grid three"></div>
+        <div id="shape-size"></div>
+      </section>
+
+      <section>
+        <h3>Material</h3>
+        <div id="material-buttons" class="btn-grid four"></div>
+        <p id="material-info" class="muted small"></p>
+      </section>
+
+      <section>
+        <h3>Environment</h3>
+        <div id="env-sliders"></div>
+      </section>
+
+      <section>
+        <h3>Presets</h3>
+        <div id="preset-buttons" class="btn-grid"></div>
+        <label class="check"><input type="checkbox" id="preset-keep"><span>Keep existing objects</span></label>
+      </section>
+
+      <section>
+        <h3>Simulation</h3>
+        <div class="btn-grid">
+          <button id="btn-sim-pause">Pause</button>
+          <button id="btn-sim-reset">Reset</button>
+          <button id="btn-sim-clear">Clear</button>
+          <button id="btn-sim-wake">Wake all</button>
+        </div>
+        <div id="toggles"></div>
+      </section>
+
+      <section>
+        <h3>Save / Load</h3>
+        <div id="slots"></div>
+        <div class="btn-grid">
+          <button id="btn-export">Export JSON</button>
+          <button id="btn-import">Import JSON</button>
+        </div>
+        <input type="file" id="import-file" accept=".json,application/json" hidden>
+      </section>
+
+      <section>
+        <h3>Keyboard &amp; gestures</h3>
+        <table class="shortcuts"><tbody id="shortcut-table"></tbody></table>
+      </section>
+
+      <footer class="muted small">App1 · MIT License · © 2026 Jaineil Rana</footer>
+    </aside>
+  </div>
+
+  <noscript><p class="noscript">App1 needs JavaScript enabled to run the physics simulation.</p></noscript>
+
+  <!--
+    Classic scripts in dependency order. Each file attaches to window.App1, so
+    the app works from file:// without a server or a build step.
+  -->
+  <script src="js/math.js"></script>
+  <script src="js/materials.js"></script>
+  <script src="js/shapes.js"></script>
+  <script src="js/body.js"></script>
+  <script src="js/collision.js"></script>
+  <script src="js/constraints.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/camera.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/tools.js"></script>
+  <script src="js/presets.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

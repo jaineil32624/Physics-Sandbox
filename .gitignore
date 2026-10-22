@@ -1,0 +1,22 @@
+# Dependencies / tooling (App1 has no build step, but keep the tree clean)
+node_modules/
+.npm/
+package-lock.json
+
+# Exported simulations
+app1-simulation-*.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
