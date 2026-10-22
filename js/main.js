@@ -257,6 +257,10 @@
   function boot() {
     try {
       App1.app = new App();
+      // Optional background music (independent of the simulation).
+      const musicSlot = document.getElementById('music-control');
+      if (musicSlot) App1.music.mountControl(musicSlot);
+      App1.music.init();
     } catch (err) {
       console.error(err);
       const box = document.getElementById('fatal');
