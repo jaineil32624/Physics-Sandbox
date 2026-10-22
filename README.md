@@ -1,8 +1,12 @@
 # Physics Sandbox
 
-**▶ [Play now in your browser](https://jaineil32624.github.io/Physics-Sandbox/)** · **⬇ [Download ZIP](https://github.com/jaineil32624/Physics-Sandbox/archive/refs/heads/main.zip)**
+| ▶ Play online | ⬇ Download (offline) | 🌐 Website |
+|---|---|---|
+| **[Play now in your browser](https://jaineil32624.github.io/Physics-Sandbox/)** | **[Physics-Sandbox.zip](https://github.com/jaineil32624/Physics-Sandbox/releases/latest/download/Physics-Sandbox.zip)** · [all releases](https://github.com/jaineil32624/Physics-Sandbox/releases) | [jaineil32624.github.io/Physics-Sandbox](https://jaineil32624.github.io/Physics-Sandbox/) |
 
-> Download the ZIP, unzip it, and double-click `index.html` to play offline. Nothing to install.
+> **Play offline:** download the ZIP, unzip it, and double-click `index.html`. Nothing to install, works in any modern browser (Chrome, Edge, Firefox, Safari), on desktop and mobile.
+>
+> **On a phone or tablet:** open the Play link, then use your browser's *Add to Home Screen*.
 
 Physics Sandbox is a 2D rigid-body physics sandbox that runs in the browser. It uses plain
 HTML, CSS and JavaScript, with a physics engine written from scratch. It needs no
