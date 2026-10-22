@@ -1,6 +1,10 @@
-# App1: 2D Physics Sandbox
+# Physics Sandbox
 
-App1 is a 2D rigid-body physics sandbox that runs in the browser. It uses plain
+**▶ [Play now in your browser](https://jaineil32624.github.io/Physics-Sandbox/)** · **⬇ [Download ZIP](https://github.com/jaineil32624/Physics-Sandbox/archive/refs/heads/main.zip)**
+
+> Download the ZIP, unzip it, and double-click `index.html` to play offline. Nothing to install.
+
+Physics Sandbox is a 2D rigid-body physics sandbox that runs in the browser. It uses plain
 HTML, CSS and JavaScript, with a physics engine written from scratch. It needs no
 libraries, no build step and no server: open `index.html` and it runs.
 

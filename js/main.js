@@ -260,7 +260,7 @@
     } catch (err) {
       console.error(err);
       const box = document.getElementById('fatal');
-      if (box) { box.hidden = false; box.textContent = 'App1 failed to start: ' + err.message; }
+      if (box) { box.hidden = false; box.textContent = 'Physics Sandbox failed to start: ' + err.message; }
     }
   }
 
